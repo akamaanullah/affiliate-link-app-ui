@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Sign in to the Northline affiliate desk.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>Sign in · Northline</title>
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <script src="js/boot.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <a class="skip" href="#login-form">Skip to sign in</a>
+  <div class="login">
+    <aside class="login-aside">
+      <div class="login-brand"><svg class="mark" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><rect width="20" height="20" rx="4.5"/><path d="M5.3 15.2V4.8h1.8l6.1 7.6V4.8h1.5v10.4h-1.8L7.1 7.6v7.6H5.3z"/></svg><span data-brand>Northline</span></div>
+      <div class="mid">
+        <div class="login-kicker">Private desk</div>
+        <h1>Issued logins. House tracking IDs.</h1>
+        <p class="lede">Generate Amazon and Walmart links with tracking IDs an administrator assigned to you. You do not connect your own affiliate account.</p>
+        <p class="login-markets">Marketplaces on the house account include the United States, United Kingdom, Canada, Germany, France, Spain, Italy, Japan, Australia, and India.</p>
+        <div class="stat-label">Sample import · last 30 days</div>
+        <div class="stat-grid">
+          <div><span>Outbound clicks</span><strong id="login-clicks">—</strong></div>
+          <div><span>Reported orders</span><strong id="login-orders">—</strong></div>
+          <div><span>Est. earnings</span><strong id="login-earn">—</strong></div>
+          <div><span>Active affiliates</span><strong id="login-people">—</strong></div>
+        </div>
+      </div>
+      <p class="login-foot" data-disclosure>As an Amazon Associate I earn from qualifying purchases.</p>
+    </aside>
+    <main class="login-main">
+      <div class="login-card">
+        <div class="mobile-brand"><svg class="mark" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><rect width="20" height="20" rx="4.5"/><path d="M5.3 15.2V4.8h1.8l6.1 7.6V4.8h1.5v10.4h-1.8L7.1 7.6v7.6H5.3z"/></svg><span data-brand>Northline</span></div>
+        <div class="spread">
+          <h1>Sign in</h1>
+          <button type="button" class="icon-btn" id="theme-btn" aria-label="Toggle color theme"></button>
+        </div>
+        <p class="sub">Use the email an administrator issued.</p>
+        <form id="login-form" class="stack-form" novalidate>
+          <div id="login-error" class="form-error" hidden></div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+              <button type="button" class="icon-btn" data-action="toggle-password" aria-label="Show password"></button>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">Sign in</button>
+        </form>
+        <div class="demo-note">
+          <h2>Issued demo accounts</h2>
+          <div class="kv"><span>Affiliate</span><code>mara.chen@northline.test</code></div>
+          <div class="kv"><span>Analyst</span><code>amelia.brooks@northline.test</code></div>
+          <div class="kv"><span>Admin</span><code>admin@northline.test</code></div>
+          <div class="kv"><span>Password</span><code>desk-2041</code></div>
+        </div>
+        <div class="login-links">
+          <button type="button" data-action="request-access">Request access</button>
+          <button type="button" data-action="forgot">Forgot password</button>
+        </div>
+        <p class="fine">No self-serve signup. Accounts are created and approved by an administrator. Sample figures are not a live Associates report.</p>
+      </div>
+    </main>
+  </div>
+  <div id="toaster" class="toaster" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <noscript><p class="noscript">Northline needs JavaScript enabled in this browser.</p></noscript>
+  <script src="js/config.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/links.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+</html>
